@@ -33,7 +33,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package org.fhir.ucum;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -57,13 +56,13 @@ public interface UcumService {
 	public abstract UcumModel getModel();
 
 	public class UcumVersionDetails {
-		private Date releaseDate;
+		private String releaseDate;
 		private String version;
 		/**
 		 * @param releaseDate
 		 * @param version
 		 */
-		public UcumVersionDetails(Date releaseDate, String version) {
+		public UcumVersionDetails(String releaseDate, String version) {
 			super();
 			this.releaseDate = releaseDate;
 			this.version = version;
@@ -71,7 +70,7 @@ public interface UcumService {
 		/**
 		 * @return the releaseDate
 		 */
-		public Date getReleaseDate() {
+		public String getReleaseDate() {
 			return releaseDate;
 		}
 		/**

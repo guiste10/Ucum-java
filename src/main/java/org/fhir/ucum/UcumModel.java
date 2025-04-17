@@ -34,7 +34,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package org.fhir.ucum;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class UcumModel {
@@ -52,7 +51,7 @@ public class UcumModel {
 	/**
 	 * date this revision was made public
 	 */
-	private Date revisionDate;
+	private String revisionDate;
 	
 	private List<Prefix> prefixes = new ArrayList<Prefix>();
 	private List<BaseUnit> baseUnits = new ArrayList<BaseUnit>();
@@ -63,7 +62,7 @@ public class UcumModel {
 	 * @param revision
 	 * @param revisionDate
 	 */
-	public UcumModel(String version, String revision, Date revisionDate) {
+	public UcumModel(String version, String revision, String revisionDate) {
 		super();
 		this.version = version;
 		this.revision = revision;
@@ -102,13 +101,13 @@ public class UcumModel {
 	/**
 	 * @return the revisionDate
 	 */
-	public Date getRevisionDate() {
+	public String getRevisionDate() {
 		return revisionDate;
 	}
 	/**
 	 * @param revisionDate the revisionDate to set
 	 */
-	public void setRevisionDate(Date revisionDate) {
+	public void setRevisionDate(String revisionDate) {
 		this.revisionDate = revisionDate;
 	}
 	/**
